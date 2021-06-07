@@ -12,6 +12,7 @@ class EmailAddressParser
   def parse
     split_emails = @email_addresses.split(/[\s,]/).reject!{|e| e == ""}
     strip_emails = split_emails.collect! {|e| e.strip}
+    binding.pry 
     strip_emails.uniq
   end 
   
